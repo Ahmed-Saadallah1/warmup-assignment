@@ -1,11 +1,11 @@
 const fs = require("fs");
 
-// ============================================================
+// ===========================================================
 // Function 1: getShiftDuration(startTime, endTime)
 // startTime: (typeof string) formatted as hh:mm:ss am or hh:mm:ss pm
 // endTime: (typeof string) formatted as hh:mm:ss am or hh:mm:ss pm
 // Returns: string formatted as h:mm:ss
-// ============================================================
+// ===========================================================
 function getShiftDuration(startTime, endTime) {
     // Parse start time
     const startParts = startTime.trim().split(' ');
@@ -57,7 +57,7 @@ function getShiftDuration(startTime, endTime) {
     return `${hours}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
 }
 
-// ============================================================
+// ===========================================================
 // Function 2: getIdleTime(startTime, endTime)
 // startTime: (typeof string) formatted as hh:mm:ss am or hh:mm:ss pm
 // endTime: (typeof string) formatted as hh:mm:ss am or hh:mm:ss pm
@@ -106,7 +106,7 @@ function getIdleTime(startTime, endTime) {
     const seconds = idleTimeSeconds % 60;
     return `${hours}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
 }
-// ============================================================
+// ===========================================================
 // Function 3: getActiveTime(shiftDuration, idleTime)
 // shiftDuration: (typeof string) formatted as h:mm:ss
 // idleTime: (typeof string) formatted as h:mm:ss
